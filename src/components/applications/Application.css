@@ -1,0 +1,102 @@
+.application-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background-color: #e1e1e1;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    color: #222;
+
+    display: flex;
+    flex-direction: column;
+    /* Убираем центрирование по горизонтали */
+    align-items: stretch;
+    /* Текст по левому краю */
+    text-align: left;
+}
+
+.application-form input,
+.application-form select,
+.application-form button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.application-form h2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #111;
+    width: 100%;
+    text-align: center; /* заголовок по центру */
+}
+
+.application-form label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.application-form textarea {
+    min-height: 80px;
+}
+
+.application-form .radio-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+    justify-content: flex-start;
+}
+
+.application-form .radio-group label {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.application-form button {
+    width: 100%;
+    padding: 14px 0;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.application-form button:hover {
+    background-color: #0056b3;
+}

@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";  // импорт регистрация
+import Application from "./components/applications/Application";
+import Header from "./components/layout/Header";
+import ApplicationList from "./components/applications/ApplicationList";
+
+const LayoutWithHeader = () => {
+    return (
+        <>
+            <Header />
+            <Outlet />
+        </>
+    );
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                {/* Страницы без Header */}
+                <Route path="/" element={<Login />} />
+                <Route path="/register" element={<SignUp />} />
+
+                {/* Все остальные страницы с Header */}
+                <Route element={<LayoutWithHeader />}>
+                    <Route path="/applications" element={<ApplicationList />} />
+                    <Route path="/application" element={<Application />} />
+                </Route>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
